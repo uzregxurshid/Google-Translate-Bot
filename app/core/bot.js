@@ -19,14 +19,13 @@ bot.use(session()).use(stage.middleware());
 
 // start command
 bot.start((ctx) => {
-
+  
   // enter main scene
   return ctx.scene.enter("main");
 });
 
 // handle any text messsage
 bot.on("text", (ctx) => {
-
   // enter main scene
   return ctx.scene.enter("main");
 });

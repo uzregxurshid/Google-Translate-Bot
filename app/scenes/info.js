@@ -12,7 +12,7 @@ info.enter(ctx => {
     'Channel: https://t.me/div_blocks',
     Markup.keyboard([
       ["🔙 Back to main menu"]
-    ]).resize().placeholder('Select one of the options')
+    ]).resize().placeholder('Choose one of the options: ')
   );
 });
 

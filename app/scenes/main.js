@@ -5,9 +5,7 @@ const mainScene = new BaseScene("main");
 
 mainScene.enter(ctx => {
   ctx.reply(
-    'Welcome to UZB - ENG translation bot!\n\n' +
-    'Please, select one of the following options:\n\n' +
-    '3. Info',
+    'Select the language you want to translate:\n\n',
     Markup.keyboard([
       ["🇺🇿 UZB - 🇬🇧 ENG", "🇬🇧 ENG - 🇺🇿 UZB"],
       ["🇺🇿 UZB - 🇷🇺 RU", "🇷🇺 RU - 🇺🇿 UZB"],
