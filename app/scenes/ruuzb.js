@@ -12,9 +12,7 @@ ruuzb.enter(ctx => {
     ["🔙 Back to main menu"]
   ]).resize().placeholder('Enter your text')
   );
-});
-
-ruuzb.on("text", ctx => {
+}).on("text", ctx => {
   const message = ctx.message.text;
   if (message === "🔙 Back to main menu") {
     return ctx.scene.enter("main");
@@ -27,12 +25,10 @@ ruuzb.on("text", ctx => {
     ctx.reply(res.text);
   }
   )
-});
-
-ruuzb.command('start', ctx => {
+}).command('start', ctx => {
   ctx.scene.enter('main');
-});
-ruuzb.use((ctx) => ctx.scene.reenter());
+}).use((ctx) => ctx.scene.reenter());
+
 
 
 module.exports = ruuzb;

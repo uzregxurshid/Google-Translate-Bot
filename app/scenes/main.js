@@ -14,10 +14,7 @@ mainScene.enter(ctx => {
       ["ℹ️ Info"]
     ]).resize().placeholder('Select one of the options')
   );
-});
-
-
-mainScene.on("text", ctx=>{
+}).on("text", ctx=>{
   const message = ctx.message.text;
   switch (message) {
     case "🇺🇿 UZB - 🇬🇧 ENG":
@@ -33,10 +30,9 @@ mainScene.on("text", ctx=>{
     default:
       return ctx.reply("Please, select one of the options");
   }
-})
+}).command('start', ctx => {
+  ctx.scene.reenter();
+}).use((ctx) => ctx.scene.reenter());
 
-
-// hande any update for reenter scene
-mainScene.use((ctx) => ctx.scene.reenter());
 
 module.exports = mainScene;

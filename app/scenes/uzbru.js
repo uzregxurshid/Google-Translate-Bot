@@ -7,14 +7,12 @@ const uzbru = new BaseScene("uzbru");
 
 uzbru.enter(ctx => {
   ctx.reply('Welcome to UZB - ENG translation bot!\n\n' +
-  "Tarjima qilinadigan matningizni kiriting:\n\n",
-  Markup.keyboard([
-    ["🔙 Back to main menu"]
-  ]).resize().placeholder('Enter your text')
+    "Tarjima qilinadigan matningizni kiriting:\n\n",
+    Markup.keyboard([
+      ["🔙 Back to main menu"]
+    ]).resize().placeholder('Enter your text')
   );
-});
-
-uzbru.on("text", ctx => {
+}).on("text", ctx => {
   const message = ctx.message.text;
   if (message === "🔙 Back to main menu") {
     return ctx.scene.enter("main");
@@ -23,16 +21,13 @@ uzbru.on("text", ctx => {
     from: 'uz',
     to: 'ru'
   })
-  .then(res => {
-    ctx.reply(res.text);
-  }
-  )
-});
-
-uzbru.command('start', ctx => {
+    .then(res => {
+      ctx.reply(res.text);
+    }
+    )
+}).command('start', ctx => {
   ctx.scene.enter('main');
-});
-uzbru.use((ctx) => ctx.scene.reenter());
+}).use((ctx) => ctx.scene.reenter());
 
 module.exports = uzbru;
 

@@ -14,17 +14,15 @@ info.enter(ctx => {
       ["🔙 Back to main menu"]
     ]).oneTime().resize().placeholder('Select one of the options')
   );
-});
-
-info.on("text", ctx => {
+}).on("text", ctx => {
   const message = ctx.message.text;
   if (message === "🔙 Back to main menu") {
     return ctx.scene.enter("main");
   }
-});
+}).command('start', ctx => {
+  ctx.scene.enter('main');
+}).use((ctx) => ctx.scene.reenter());
 
-
-info.use((ctx) => ctx.scene.reenter());
 
 module.exports = info;
 
