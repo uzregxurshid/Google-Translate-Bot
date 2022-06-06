@@ -8,13 +8,12 @@ mainScene.enter(ctx => {
     'Welcome to UZB - ENG translation bot!\n\n' +
     'Please, select one of the following options:\n\n' +
     '3. Info',
-    Markup.removeKeyboard().reply_markup(
     Markup.keyboard([
       ["🇺🇿 UZB - 🇬🇧 ENG", "🇬🇧 ENG - 🇺🇿 UZB"],
       ["ℹ️ Info"]
     ]).resize().placeholder('Select one of the options')
-  ));
-}).on("text", ctx=>{
+  );
+}).on("text", ctx => {
   const message = ctx.message.text;
   switch (message) {
     case "🇺🇿 UZB - 🇬🇧 ENG":
