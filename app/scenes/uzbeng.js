@@ -10,13 +10,16 @@ uzbeng.enter(ctx => {
   "Tarjima qilinadigan matningizni kiriting:\n\n",
   Markup.keyboard([
     ["🔙 Back to main menu"]
-  ]).resize().placeholder('Enter your text')
+  ]).resize().placeholder('Matnni kiriting')
   );
 });
 
 uzbeng.on("text", ctx => {
   const message = ctx.message.text;
   if (message === "🔙 Back to main menu") {
+    return ctx.scene.enter("main");
+  }
+  if (message=="/start") {
     return ctx.scene.enter("main");
   }
   translate(message, {

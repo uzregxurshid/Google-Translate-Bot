@@ -19,6 +19,9 @@ uzbeng.on("text", ctx => {
   if (message === "🔙 Back to main menu") {
     return ctx.scene.enter("main");
   }
+  if (message=="/start") {
+    return ctx.scene.enter("main");
+  }
   translate(message, {
     from: 'en',
     to: 'uz'
