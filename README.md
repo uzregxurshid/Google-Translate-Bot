@@ -1,5 +1,5 @@
 # Google-Translate-Bot
-This bot made telegrafjs
+For building used library telegraf 
 
 <br> Google Translate API used
 
