@@ -29,6 +29,9 @@ uzbeng.on("text", ctx => {
   )
 });
 
+uzbeng.command('start', ctx => {
+  ctx.scene.enter('main');
+});
 
 uzbeng.use((ctx) => ctx.scene.reenter());
 

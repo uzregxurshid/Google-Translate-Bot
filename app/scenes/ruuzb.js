@@ -29,8 +29,11 @@ ruuzb.on("text", ctx => {
   )
 });
 
-
+ruuzb.command('start', ctx => {
+  ctx.scene.enter('main');
+});
 ruuzb.use((ctx) => ctx.scene.reenter());
+
 
 module.exports = ruuzb;
 

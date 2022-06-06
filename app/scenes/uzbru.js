@@ -29,7 +29,9 @@ uzbru.on("text", ctx => {
   )
 });
 
-
+uzbru.command('start', ctx => {
+  ctx.scene.enter('main');
+});
 uzbru.use((ctx) => ctx.scene.reenter());
 
 module.exports = uzbru;
