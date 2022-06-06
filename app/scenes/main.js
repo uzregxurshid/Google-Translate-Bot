@@ -7,11 +7,10 @@ mainScene.enter(ctx => {
   ctx.reply(
     'Welcome to UZB - ENG translation bot!\n\n' +
     'Please, select one of the following options:\n\n' +
-    '1. Translate from Uzbek to English\n' +
-    '2. Translate from English to Uzbek\n' +
     '3. Info',
     Markup.keyboard([
       ["🇺🇿 UZB - 🇬🇧 ENG", "🇬🇧 ENG - 🇺🇿 UZB"],
+      [" - 🇷🇺 RU", "🇷🇺 RU - 🇺🇿 UZB"],
       ["ℹ️ Info"]
     ]).resize().placeholder('Select one of the options')
   );
@@ -25,6 +24,10 @@ mainScene.on("text", ctx=>{
       return ctx.scene.enter("uzbeng");
     case "🇬🇧 ENG - 🇺🇿 UZB":
       return ctx.scene.enter("enguzb");
+    case "🇺🇿 UZB - 🇷🇺 RU":
+      return ctx.scene.enter("uzbru");
+    case "🇷🇺 RU - 🇺🇿 UZB":
+      return ctx.scene.enter("ruuzb");
     case "ℹ️ Info":
       return ctx.scene.enter("info");
     default:
