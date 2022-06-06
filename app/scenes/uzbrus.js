@@ -6,17 +6,17 @@ const translate = require('@vitalets/google-translate-api');
 const uzbrus = new BaseScene("uzbrus");
 
 uzbrus.enter(ctx => {
-  ctx.reply('Welcome to UZB - ENG translation bot!\n\n' +
+  ctx.reply("🇺🇿 UZB - 🇷🇺 RU\n\n" +
   "Tarjima qilinadigan matningizni kiriting:\n\n",
   Markup.keyboard([
-    ["🔙 Back to main menu"]
-  ]).resize().placeholder('Matnni kiriting')
+    ["🔙 Asosiy menyuga qaytish"]
+  ]).resize().placeholder('Matnni kiriting: ')
   );
 });
 
 uzbrus.on("text", ctx => {
   const message = ctx.message.text;
-  if (message === "🔙 Back to main menu") {
+  if (message === "🔙 Asosiy menyuga qaytish") {
     return ctx.scene.enter("main");
   }
   if (message=="/start") {

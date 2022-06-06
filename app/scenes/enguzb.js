@@ -6,11 +6,11 @@ const translate = require('@vitalets/google-translate-api');
 const uzbeng = new BaseScene("enguzb");
 
 uzbeng.enter(ctx => {
-  ctx.reply('Welcome to UZB - ENG translation bot!\n\n' +
+  ctx.reply('🇬🇧 ENG - 🇺🇿 UZB\n\n' +
   "Enter your text to translate:\n\n",
   Markup.keyboard([
     ["🔙 Back to main menu"]
-  ]).resize().placeholder('Enter your text')
+  ]).resize().placeholder('Enter your text: ')
   );
 });
 
