@@ -12,7 +12,7 @@ mainScene.enter(ctx => {
       ["🇺🇿 UZB - 🇬🇧 ENG", "🇬🇧 ENG - 🇺🇿 UZB"],
       ["🇺🇿 UZB - 🇷🇺 RU", "🇷🇺 RU - 🇺🇿 UZB"],
       ["ℹ️ Info"]
-    ]).resize().placeholder('Select one of the options')
+    ]).resize().placeholder('Select one of the options').reply_markup
   );
 }).on("text", ctx=>{
   const message = ctx.message.text;
