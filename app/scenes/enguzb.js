@@ -10,7 +10,7 @@ uzbeng.enter(ctx => {
   "Enter your text to translate:\n\n",
   Markup.keyboard([
     ["🔙 Back to main menu"]
-  ]).oneTime().resize().placeholder('Enter your text')
+  ]).resize().placeholder('Enter your text')
   );
 });
 
