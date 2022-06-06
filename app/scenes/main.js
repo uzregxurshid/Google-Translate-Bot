@@ -10,7 +10,7 @@ mainScene.enter(ctx => {
       ["🇺🇿 UZB - 🇬🇧 ENG", "🇬🇧 ENG - 🇺🇿 UZB"],
       ["🇺🇿 UZB - 🇷🇺 RU", "🇷🇺 RU - 🇺🇿 UZB"],
       ["ℹ️ Info"]
-    ]).resize().placeholder('Select one of the options')
+    ]).resize().placeholder('Select one of the options: ')
   );
 }).on("text", ctx => {
   const message = ctx.message.text;
@@ -26,7 +26,7 @@ mainScene.enter(ctx => {
     case "ℹ️ Info":
       return ctx.scene.enter("info");
     default:
-      return ctx.reply("Please, select one of the options");
+      return ctx.scene.reenter();
   }
 }).command('start', ctx => {
   ctx.scene.reenter();

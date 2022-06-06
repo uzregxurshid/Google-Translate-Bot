@@ -15,7 +15,8 @@ bot.catch((err) => {
 });
 
 // registration middlewares
-bot.use(session()).use(stage.middleware());
+bot.use(session());
+bot.use(stage.middleware());
 
 // start command
 bot.start((ctx) => {
