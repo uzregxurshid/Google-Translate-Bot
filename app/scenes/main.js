@@ -10,7 +10,7 @@ mainScene.enter(ctx => {
     '3. Info',
     Markup.keyboard([
       ["🇺🇿 UZB - 🇬🇧 ENG", "🇬🇧 ENG - 🇺🇿 UZB"],
-      [" - 🇷🇺 RU", "🇷🇺 RU - 🇺🇿 UZB"],
+      ["🇺🇿 UZB - 🇷🇺 RU", "🇷🇺 RU - 🇺🇿 UZB"],
       ["ℹ️ Info"]
     ]).resize().placeholder('Select one of the options')
   );
