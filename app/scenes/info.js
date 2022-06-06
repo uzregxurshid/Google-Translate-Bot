@@ -12,17 +12,19 @@ info.enter(ctx => {
     'Channel: https://t.me/div_blocks',
     Markup.keyboard([
       ["🔙 Back to main menu"]
-    ]).oneTime().resize().placeholder('Select one of the options')
+    ]).resize().placeholder('Select one of the options')
   );
-}).on("text", ctx => {
+});
+
+info.on("text", ctx => {
   const message = ctx.message.text;
   if (message === "🔙 Back to main menu") {
     return ctx.scene.enter("main");
   }
-}).command('start', ctx => {
-  ctx.scene.enter('main');
-}).use((ctx) => ctx.scene.reenter());
+});
 
+
+info.use((ctx) => ctx.scene.reenter());
 
 module.exports = info;
 

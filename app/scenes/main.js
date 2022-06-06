@@ -10,7 +10,6 @@ mainScene.enter(ctx => {
     '3. Info',
     Markup.keyboard([
       ["🇺🇿 UZB - 🇬🇧 ENG", "🇬🇧 ENG - 🇺🇿 UZB"],
-      ["🇺🇿 UZB - 🇷🇺 RU", "🇷🇺 RU - 🇺🇿 UZB"],
       ["ℹ️ Info"]
     ]).resize().placeholder('Select one of the options').reply_markup
   );
@@ -21,10 +20,6 @@ mainScene.enter(ctx => {
       return ctx.scene.enter("uzbeng");
     case "🇬🇧 ENG - 🇺🇿 UZB":
       return ctx.scene.enter("enguzb");
-    case "🇺🇿 UZB - 🇷🇺 RU":
-      return ctx.scene.enter("uzbru");
-    case "🇷🇺 RU - 🇺🇿 UZB":
-      return ctx.scene.enter("ruuzb");
     case "ℹ️ Info":
       return ctx.scene.enter("info");
     default:

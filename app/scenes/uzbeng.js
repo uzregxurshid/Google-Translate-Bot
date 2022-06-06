@@ -12,7 +12,9 @@ uzbeng.enter(ctx => {
     ["🔙 Back to main menu"]
   ]).resize().placeholder('Enter your text')
   );
-}).on("text", ctx => {
+});
+
+uzbeng.on("text", ctx => {
   const message = ctx.message.text;
   if (message === "🔙 Back to main menu") {
     return ctx.scene.enter("main");
@@ -25,10 +27,10 @@ uzbeng.enter(ctx => {
     ctx.reply(res.text);
   }
   )
-}).command('start', ctx => {
-  ctx.scene.enter('main');
-}).use((ctx) => ctx.scene.reenter());
+});
 
+
+uzbeng.use((ctx) => ctx.scene.reenter());
 
 module.exports = uzbeng;
 
